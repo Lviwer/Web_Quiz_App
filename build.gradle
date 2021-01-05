@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets.main.resources.srcDirs = ["src/resources"]
+
+dependencies {
+    runtimeOnly 'com.h2database:h2' //for using H2 database
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //for using Spring Data JPA
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-security' //added for security 19.12.2020
+    implementation 'org.springframework.security:spring-security-test' //added for test 19.12.2020
+   // implementation 'org.springframework.boot:spring-boot-starter-validation' //added to validation
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+}
