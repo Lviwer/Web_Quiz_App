@@ -14,7 +14,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     @Autowired
-    UserDetailsService userDetailsService; //from spring
+    UserDetailsService userDetailsService; 
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
